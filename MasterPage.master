@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Student Financial Support</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/customStyle.css" rel="stylesheet" />
+    <%-- fonts --%>
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <%-- NAVIGATION BAR --%>
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container-fluid container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="MainMenu.aspx"><span class="glyphicon glyphicon-home" style="color:yellowgreen; font-size: 1.5em;"></span></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <div style="margin-top: 13px; color: white;">
+                                <asp:Label ID="sessionLabel" runat="server" Font-Size="1.5em" CssClass="welcomeLbl"></asp:Label>
+                            </div>
+                        </li>
+                        <li>
+                            <div style="margin-top: 8px;">
+                                <asp:Button ID="btnLogout" runat="server" Text="Logout" OnClick="logoutBtn_Click" CssClass="btn btn-danger" CausesValidation="False" />
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <%-- scripts --%>
+        <script src="Scripts/jquery-1.9.1.min.js"></script>
+        <script src="Scripts/bootstrap.min.js"></script>
+        <%-- footer section --%>
+        <footer>
+            Copyright &copy; Student Financial Support 2015
+        </footer>
+    </form>
+</body>
+</html>

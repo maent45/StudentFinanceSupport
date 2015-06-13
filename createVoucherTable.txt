@@ -1,0 +1,159 @@
+CREATE TABLE [dbo].[StudentVouchers]
+(
+	[Student_Id] NVARCHAR(10) NOT NULL 
+	CONSTRAINT [FK_dbo.StudentRegistration_dbo.StudentVouchers] FOREIGN KEY ([Student_Id]) REFERENCES [dbo].[StudentRegistration] ([Student_Id]), 
+    [Grant_Type] NVARCHAR(50) NULL, 
+    [Grant_Description] NVARCHAR(50) NULL, 
+    [Grant_Value] MONEY NULL, 
+    [Date_Of_Issue] DATE NULL, 
+    [KohaFunds] MONEY NULL, 
+    [Ref_No] INT NOT NULL IDENTITY
+
+
+)
+
+CREATE TABLE [dbo].[StudentRegistration] (
+    [Student_Id]                 NVARCHAR (10)  NOT NULL,
+    [Student_FirstName]          NVARCHAR (120) NOT NULL,
+    [Student_LastName]           NVARCHAR (120) NULL,
+    [Student_Gender]             NVARCHAR (6)   NOT NULL,
+    [Student_DateOfBirth]        DATETIME       NOT NULL,
+    [Student_Address1]           NVARCHAR (50)  NULL,
+    [Student_Accomodation_Type]  NVARCHAR (70)  NULL,
+    [Student_Phone]              NVARCHAR (50)  NULL,
+    [Student_Mobile]             NVARCHAR (50)  NULL,
+    [Student_Email]              NVARCHAR (50)  NULL,
+    [Student_Marital_Status]     NVARCHAR (50)  NULL,
+    [Student_Contact]            NVARCHAR (50)  NULL,
+    [Student_Main_Ethnicity]     NVARCHAR (50)  NULL,
+    [Student_Faculty]            NVARCHAR (50)  NOT NULL,
+    [Student_Courses]            NVARCHAR (50)  NULL,
+    [Student_Detailed_Ethnicity] NVARCHAR (50)  NULL,
+    [Student_Campus]             NVARCHAR (50)  NOT NULL,
+    PRIMARY KEY CLUSTERED ([Student_Id] ASC)
+);
+
+CREATE TABLE [dbo].[LoginDetails] (
+    [Login_Id]       NVARCHAR (10) NOT NULL,
+    [Login_Password] NVARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Login_Id] ASC)
+);
+
+
+
+<%-- monthly grant summary div --%>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 viewReportsSubHead">
+            <div class="col-lg-2">
+                <h4>Monthly Grant Summary:</h4>
+            </div>
+            <div class="col-lg-6 col-md-4 col-sm-4 col-xs-4">
+                <%-- month drop down list --%>
+                <asp:DropDownList ID="dropDownList1" CssClass="form-control" runat="server">
+                    <asp:ListItem Value="">Select Month</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <%-- year drop down list --%>
+                <asp:DropDownList ID="dropDownList2" CssClass="form-control dropdown" runat="server">
+                    <asp:ListItem Value="">Select Year</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+        </div>
+
+        <%-- monthly grant summary div --%>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 viewReportsSubHead">
+            <div class="col-lg-2">
+                <h4>Monthly Campus-Grant Summary:</h4>
+            </div>
+            <div class="col-lg-6 col-md-4 col-sm-4 col-xs-4">
+                <%-- month drop down list --%>
+                <asp:DropDownList ID="dropDownList3" CssClass="form-control" runat="server">
+                    <asp:ListItem Value="">Select Month</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <%-- year drop down list --%>
+                <asp:DropDownList ID="dropDownList4" CssClass="form-control dropdown" runat="server">
+                    <asp:ListItem Value="">Select Year</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+        </div>
+
+        <%-- monthly campus summary div --%>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 viewReportsSubHead">
+            <div class="col-lg-2">
+                <h4>Monthly Campus Summary:</h4>
+            </div>
+            <div class="col-lg-6 col-md-4 col-sm-4 col-xs-4">
+                <%-- month drop down list --%>
+                <asp:DropDownList ID="dropDownList5" CssClass="form-control" runat="server">
+                    <asp:ListItem Value="">Select Month</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <%-- year drop down list --%>
+                <asp:DropDownList ID="dropDownList6" CssClass="form-control dropdown" runat="server">
+                    <asp:ListItem Value="">Select Year</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+        </div>
+
+        <%-- Monthly Faculty Grant Summary: --%>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 viewReportsSubHead">
+            <div class="col-lg-2">
+                <h4>Monthly Faculty Grant Summary:</h4>
+            </div>
+            <div class="col-lg-6 col-md-4 col-sm-4 col-xs-4">
+                <%-- month drop down list --%>
+                <asp:DropDownList ID="dropDownList7" CssClass="form-control" runat="server">
+                    <asp:ListItem Value="">Select Month</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <%-- year drop down list --%>
+                <asp:DropDownList ID="dropDownList8" CssClass="form-control dropdown" runat="server">
+                    <asp:ListItem Value="">Select Year</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+        </div>
+
+        <%-- Monthly Faculty Summary: --%>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 viewReportsSubHead">
+            <div class="col-lg-2">
+                <h4>Monthly Faculty Summary:</h4>
+            </div>
+            <div class="col-lg-6 col-md-4 col-sm-4 col-xs-4">
+                <%-- month drop down list --%>
+                <asp:DropDownList ID="dropDownList9" CssClass="form-control" runat="server">
+                    <asp:ListItem Value="">Select Month</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <%-- year drop down list --%>
+                <asp:DropDownList ID="dropDownList10" CssClass="form-control dropdown" runat="server">
+                    <asp:ListItem Value="">Select Year</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+        </div>
+
+/*==============weekly summary grant=====================*/
+
+select Grant_Type,DATENAME(MONTH,Date_Of_Issue) as month_name
+,datediff(week,CONVERT(char, Date_Of_Issue - (DAY(Date_Of_Issue) - 1),101),Date_Of_Issue)+1 as weeknumber,
+count(distinct Student_Id) as NoofStudents,count(Student_Id) as NoofGrants,SUM(Grant_Value) as Amount,SUM(isnull(KohaFunds,0)) as KohafundsAmount,
+(SUM(Grant_Value)+SUM(isnull(KohaFunds,0))) as TotalGrantAmount
+from StudentVouchers
+ where Year(Date_Of_Issue)=@Year  and month(Date_Of_Issue)=@monthnumber and Grant_Type=@Voucher 
+group by Grant_Type,DATENAME(MONTH,Date_Of_Issue),
+datediff(week,CONVERT(char, Date_Of_Issue - (DAY(Date_Of_Issue) - 1),101),Date_Of_Issue)+1
+order by datediff(week,CONVERT(char, Date_Of_Issue - (DAY(Date_Of_Issue) - 1),101),Date_Of_Issue)+1
+
+
+
+/*==============faculty grant summary===================*/
+select Grant_Type,datename(MONTH,A.Date_Of_Issue) as CurrentMonth, COUNT(distinct A.Student_Id) as TotalStudents,
+ COUNT( A.Student_Id) as TotalGrants,
+ SUM(Grant_Value+ISNULL(KohaFunds,0)) as Totalamount, B.Student_Faculty 
+ from StudentVouchers as A join StudentRegistration as B on A.Student_Id=B.Student_Id 
+ where MONTH(A.Date_Of_Issue)=@Month and Year(A.Date_Of_Issue)=@Year
+group by datename(MONTH,A.Date_Of_Issue),Student_Faculty,Grant_Type"

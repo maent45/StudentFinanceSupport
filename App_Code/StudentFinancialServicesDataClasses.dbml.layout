@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="StudentFinancialServicesDataClasses">
+  <DataContextMoniker Name="/StudentFinancialServicesDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2d0451d0-c660-420d-8d10-7cf95c621c75" absoluteBounds="7.375, 0.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/StudentFinancialServicesDataClassesDataContext/LoginDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="52911aef-17e8-4df3-b6ae-017ae797aa54" absoluteBounds="7.3900000000000006, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="762567f5-7a4d-4d4b-befa-0de9771be34a" absoluteBounds="4.375, 3.25, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/StudentFinancialServicesDataClassesDataContext/StudentRegistration" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1b6cbde1-028a-4e9e-aa19-296867720a88" absoluteBounds="4.39, 3.71, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="02b5a8a4-adb6-4eb8-9e08-f2908e4e786c" absoluteBounds="8.25, 4.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/StudentFinancialServicesDataClassesDataContext/StudentVoucher" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a511f777-775b-418e-b439-ed1522ea2506" absoluteBounds="8.265, 4.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.375 : 5.20274983723958); (8.25 : 5.20274983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/StudentFinancialServicesDataClassesDataContext/StudentRegistration/StudentRegistration_StudentVoucher" />
+      <nodes>
+        <classShapeMoniker Id="762567f5-7a4d-4d4b-befa-0de9771be34a" />
+        <classShapeMoniker Id="02b5a8a4-adb6-4eb8-9e08-f2908e4e786c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="55966f4f-1992-4ecc-97b0-e6516778ab27" absoluteBounds="2.125, 1.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/StudentFinancialServicesDataClassesDataContext/FacultyType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="355a1a0c-69da-44f9-bf36-c893250451ab" absoluteBounds="2.14, 1.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="55e2265d-4ef0-48b6-b6d3-d3efdc9d8e01" absoluteBounds="4.75, 0.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/StudentFinancialServicesDataClassesDataContext/GrantType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="67ba412b-cc71-40b3-91e3-1bee6379b0b0" absoluteBounds="4.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7d71c679-591d-4842-b8e0-c433a6e0d20c" absoluteBounds="2, 4.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/StudentFinancialServicesDataClassesDataContext/CourseType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="891d08df-003b-4c7d-92ca-a2e5bc18d29e" absoluteBounds="2.015, 4.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,252 @@
+﻿body {
+    font-family: Calibri;
+    background-color: #209b60;
+}
+
+h1 {
+    color: orange;
+}
+
+h4, p {
+    color: white;
+}
+/*--- SEARCH PAGE CSS ---*/
+.ajaxAutoCompleteStyle {
+    border-radius: 5px;
+    border: solid 1px yellowgreen;
+    margin: 0px;
+    padding: 12px;
+    overflow: auto;
+    font-weight: bold;
+    font-family: Calibri;
+    font-size: 15px;
+    background-color: #FFFFFF;
+    list-style-type: none;
+}
+.ajaxAutoCompleteStyle :hover{
+    background-color: yellowgreen !important;
+    color: #555 !important;
+}
+/*--- ADD STUDENT PAGE CSS ---*/
+.addStudentDiv {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+    .addStudentDiv p {
+        color: #222;
+    }
+/*--- LOGIN PAGE CSS ---*/
+.loginForm {
+    background-image: url(Images/slide_02.jpg);
+    background-repeat: no-repeat;
+    padding: 13.5%;
+}
+
+    .loginForm p {
+        color: #222 !important;
+    }
+/*--- GREETING LABEL CSS ---*/
+.welcomeLbl {
+    color: white !important;
+    font-weight: bold !important;
+    margin-right: 20px;
+}
+/*--- MENU PAGE CSS ---*/
+.menuPage {
+    text-align: center !important;
+    margin-top: 80px;
+}
+.menuPage h2 {
+    font-family: 'Yanone Kaffeesatz';
+    font-size: 2.5em;
+    color: #555;
+}
+.mainMenuStudentProfile, .mainMenuAdd, .mainMenuSearch, .mainMenuGenerate, .mainMenuStudentList{
+    background: white !important;
+    border: 2px outset orange;
+}
+.mainMenuLinks :hover {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: lightgreen !important;
+}
+ span :hover {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: white !important;
+}
+.menuPage span {
+    padding: 30px;
+    border-radius: 50%;
+    background-color: yellowgreen;
+    color: white;
+    font-size: 3.3em;
+}
+.glyphicon :hover{
+    color: #d9534f !important;
+}
+.mainMenuStudentList {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+}
+.mainMenuSearch {
+    background-color: lightgreen;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.mainMenuAdd {
+    background-color: lightgreen;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.mainMenuGenerate {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.mainMenuStudentProfile {
+    margin-top: 15px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+}
+.navbar-inverse {
+    background-color: #4162A6 !important;
+    border: 0px;
+}
+/*--- FOOTER CSS ---*/
+footer {
+    background-color: #4162A6;
+    padding: 50px;
+    margin-top: 10%;
+    font-size: 1.7em;
+    text-align: center;
+    color: lightgray;
+}
+/*--- INDIVIDUAL PROFILE PAGE CSS ---*/
+.individualProfile {
+    font-size: 1.5em !important;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.backLink span {
+    font-size: 2em;
+    color: lightgreen;
+}
+/*--- VIEW REPORT PAGE CSS ---*/
+.viewReportsSubHead h4 {
+    color: #555;
+}
+
+.summaryGridView {
+    margin-top: 15px !important;
+    background-color: red;
+}
+
+.tab-pane {
+    background-color: yellowgreen;
+    padding: 60px;
+    color: #555;
+}
+
+.div1 {
+    background-color: white;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.div2 {
+    background-color: yellowgreen;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+/*--- ADMIN PAGE CSS ---*/
+.mainDiv {
+    background-color: yellowgreen !important;
+    padding: 15px;
+    border-radius: 10px;
+}
+/*--- password strength css ---*/
+.weakPass{
+    background-color: #d9534f;
+    width: 27.5% !important;
+    padding: 5px;
+    border-radius: 3px;
+    margin-left: 0.8%;
+    color: white;
+}
+.mediumPass{
+    background-color: orange;
+    width: 27.5% !important;
+    padding: 5px;
+    border-radius: 3px;
+    margin-left: 0.8%;
+    color: white;
+}
+.strongPass{
+    background-color: #209b60;
+    width: 27.5% !important;
+    padding: 5px;
+    border-radius: 3px;
+    margin-left: 0.8%;
+    color: white;
+}
+.unbreakablePass{
+    background-color: green;
+    width: 27.5% !important;
+    padding: 5px;
+    border-radius: 3px;
+    margin-left: 0.8%;
+    color: white;
+}
+.tab-pane p {
+    color: black !important;
+}
+
+.nav-tabs > li > a {
+    background-color: white;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    background-color: yellowgreen;
+}
+
+.divThree {
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+    .divThree p {
+        color: #222;
+    }
+
+.divFour {
+    background-color: yellowgreen;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+    .divFour p {
+        color: #222;
+    }
+
+.divFive {
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+    .divFive p {
+        color: #222;
+    }

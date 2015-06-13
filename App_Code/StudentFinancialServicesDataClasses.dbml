@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="StudentFinancialServices" Class="StudentFinancialServicesDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\StudentFinancialServices.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="StudentFinancialServicesConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.LoginDetails" Member="LoginDetails">
+    <Type Name="LoginDetail">
+      <Column Name="Login_Id" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Login_Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StudentRegistration" Member="StudentRegistrations">
+    <Type Name="StudentRegistration">
+      <Column Name="Student_Id" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Student_FirstName" Type="System.String" DbType="NVarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="Student_LastName" Type="System.String" DbType="NVarChar(120)" CanBeNull="true" />
+      <Column Name="Student_Gender" Type="System.String" DbType="NVarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Student_DateOfBirth" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Student_Address1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Accomodation_Type" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
+      <Column Name="Student_Phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Marital_Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Contact" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Main_Ethnicity" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Faculty" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Student_Courses" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Detailed_Ethnicity" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Student_Campus" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="StudentRegistration_StudentVoucher" Member="StudentVouchers" ThisKey="Student_Id" OtherKey="Student_Id" Type="StudentVoucher" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StudentVouchers" Member="StudentVouchers">
+    <Type Name="StudentVoucher">
+      <Column Name="Student_Id" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Grant_Type" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Grant_Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Grant_Value" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Date_Of_Issue" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="KohaFunds" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Ref_No" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="StudentRegistration_StudentVoucher" Member="StudentRegistration" ThisKey="Student_Id" OtherKey="Student_Id" Type="StudentRegistration" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FacultyTypes" Member="FacultyTypes">
+    <Type Name="FacultyType">
+      <Column Name="Faculty_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Faculty_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GrantTypes" Member="GrantTypes">
+    <Type Name="GrantType">
+      <Column Name="Grant_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Grant_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CourseTypes" Member="CourseTypes">
+    <Type Name="CourseType">
+      <Column Name="Course_Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Course_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
